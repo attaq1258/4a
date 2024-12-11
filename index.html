@@ -30,11 +30,11 @@ button {font-size:2em;margin:5px 5px;}
 
 <img src="gball1.gif" width="320" height="420"></div>
 <img class="leg" src="leg2.jpg">
-<span id="demo" onClick="select();"><br><br>🔮</span><span class="blink"></span></div>
+<span id="demo" onClick="select();"><br><br><br>🔮</span><span class="blink"></span></div>
 <div id="btn">
-<button onClick="random(myArray3,'<br><br>🎭','😊ɸ℘ɛᴙ');">🎭</button>
-<button onClick="random(myArray2,'<br><br>🎲','🤔ɸ℘ɛᴙ');">🎲</button>
-<button onClick="random(myArray1,'<br><br>🎓','😎ᙨᖘᙓᖆ ᗣᕼᗪᙓᖘᙅᗝᕼᙓ');">🎓</button>
+<button onClick="random(myArray3,'<br><br><br>🎭','😊ɸ℘ɛᴙ');">🎭</button>
+<button onClick="random(myArray2,'<br><br><br>🎲','🤔ɸ℘ɛᴙ');">🎲</button>
+<button onClick="random(myArray1,'<br><br><br>🎓','😎ᙨᖘᙓᖆ ᗣᕼᗪᙓᖘᙅᗝᕼᙓ');">🎓</button>
 <button onClick="random(myArray4,1,'👸ɸ℘ɛᴙ Ꭿϰϫɛ℘ɕσϰɛ');">🃏</button>
 </div>
 <script>
@@ -423,7 +423,7 @@ const regex=/[бвгджзйклмнпрстфхцчшщ]+[аеёиоуыэюя]
 let out='', offset=0, prev=0, pass=false;
 let matches=text.matchAll(regex);
 for (const m of matches) {
-if(offset>15&&text[prev-1]!=' ') hyphen='|'; else hyphen='';
+if(offset>9&&text[prev-1]!=' ') hyphen='|'; else hyphen='';
 out += text.substring(offset, prev)+hyphen;offset=prev;
 if (!pass)prev=m.index; pass=m[0].length < 2;}
 out += text.substring(offset);return out;};
