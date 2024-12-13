@@ -7,8 +7,8 @@
 <style>
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 html,body{background:#000000 url('giphy.webp') no-repeat fixed;background-size:cover;font-size:25px;width:600px;height:auto}
-
-.tar {float:left;margin:5px;width:250px;height:460px;}
+.mem {float:left;width:280px;height:280px;}
+.tar {float:left;width:270px;height:460px;}
 .up {transform:rotate(180deg);}
 
 .btn {float:left;opacity:0.8;width:320px;}
@@ -33,9 +33,9 @@ button {font-size:2em;margin:5px 5px;}
 <span id="demo" onClick="select();"><br><br><br><br>🔮</span><span class="blink"></span></div>
 <div id="btn">
 <button onClick="random(myArray3,'🎭','😊ɸ℘ɛᴙ');">🎭</button>
-<button onClick="random(myArray2,'🎲','🤔ɸ℘ɛᴙ');">🎲</button>
+<button onClick="random(myArray2,'1','🤔ɸ℘ɛᴙ');">🎲</button>
 <button onClick="random(myArray1,'🎓','😎ᙨᖘᙓᖆ ᗣᕼᗪᙓᖘᙅᗝᕼᙓ');">🎓</button>
-<button onClick="random(myArray4,1,'👸ɸ℘ɛᴙ Ꭿϰϫɛ℘ɕσϰɛ');">🃏</button>
+<button onClick="random(myArray4,0,'👸ɸ℘ɛᴙ Ꭿϰϫɛ℘ɕσϰɛ');">🃏</button>
 </div>
 <script>
 const myArray1=['Шел рыцарь. По пути потерял коня, доспехи, остался только меч. Рыцарь был голоден, и его мучила жажда. Вдруг вдалеке он увидел озеро. Но у самого озера сидел трехглавый дракон. Рыцарь выхватил меч и из последних сил начал сражаться. Сутки бился, вторые бился. Две головы дракона отрубил. На третьи сутки дракон упал без сил. Рядом упал обессиленный рыцарь. И тогда из последних сил дракон спрашивает: "Рыцарь, а чего ты хотел-то?". Тот говорит: "Воды попить". Дракон сказал: "Ну и пил бы".',
@@ -416,7 +416,7 @@ document.getElementById("mar2").innerHTML=armar2[day];
 var rx=Math.floor(Math.random()*x.length);
 var rand=x[rx];
 const demo=document.getElementById("demo");
-demo.innerHTML=y==1?rx%2==0?'<img class="tar" src="img/'+(rx/2|0)+'.png">':'<img class="tar up" src="img/'+(rx/2|0)+'.png">':'<br><br><br><br>'+y;
+if(y==1)demo.innerHTML='<br><br><br><img class="mem" src="img1/'+rx+'.jpg">';else demo.innerHTML=y==0?rx%2==0?'<img class="tar" src="img/'+(rx/2|0)+'.png">':'<img class="tar up" src="img/'+(rx/2|0)+'.png">':'<br><br><br><br>'+y;
 rand=wordWrap(rand);tgl();
 function wordWrap(text) {
 const regex=/[бвгджзйклмнпрстфхцчшщ]+[аеёиоуыэюя][бвгджзйклмнпрстфхцчшщ](?=[бвгджзйклмнпрстфхцчшщьъ ])[ьъй]?|[бвгджзйклмнпрстфхцчшщ]+[аеёиоуыэюя][й]?|[аеёиоуыэюя][бвгджзйклмнпрстфхцчшщ](?=[бвгджзйклмнпрстфхцчшщьъ ])[ъь]?|[аеёиоуыэюя](?=[а-я]{2})|(?<= +)[^\s]+(?= +|$)/gmi;
