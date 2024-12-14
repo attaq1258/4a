@@ -7,7 +7,7 @@
 <style>
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 html,body{background:#000000 url('giphy.webp') no-repeat fixed;background-size:cover;font-size:25px;width:600px;height:auto}
-.mem {float:left;width:280px;height:280px;}
+.mem {float:left;width:280px;height:350px;margin-top:80px;}
 .tar {float:left;width:270px;height:460px;}
 .up {transform:rotate(180deg);}
 
@@ -416,7 +416,7 @@ document.getElementById("mar2").innerHTML=armar2[day];
 var rx=Math.floor(Math.random()*x.length);
 var rand=x[rx];
 const demo=document.getElementById("demo");
-if(y==1)demo.innerHTML='<br><br><br><img class="mem" src="Img1/'+rx+'.jpg">';else demo.innerHTML=y==0?rx%2==0?'<img class="tar" src="img/'+(rx/2|0)+'.png">':'<img class="tar up" src="img/'+(rx/2|0)+'.png">':'<br><br><br><br>'+y;
+if(y==1)demo.innerHTML='<img class="mem" src="Img1/'+rx+'.jpg">';else demo.innerHTML=y==0?rx%2==0?'<img class="tar" src="img/'+(rx/2|0)+'.png">':'<img class="tar up" src="img/'+(rx/2|0)+'.png">':'<br><br><br><br>'+y;
 rand=wordWrap(rand);tgl();
 function wordWrap(text) {
 const regex=/[бвгджзйклмнпрстфхцчшщ]+[аеёиоуыэюя][бвгджзйклмнпрстфхцчшщ](?=[бвгджзйклмнпрстфхцчшщьъ ])[ьъй]?|[бвгджзйклмнпрстфхцчшщ]+[аеёиоуыэюя][й]?|[аеёиоуыэюя][бвгджзйклмнпрстфхцчшщ](?=[бвгджзйклмнпрстфхцчшщьъ ])[ъь]?|[аеёиоуыэюя](?=[а-я]{2})|(?<= +)[^\s]+(?= +|$)/gmi;
