@@ -33,7 +33,7 @@ button {font-size:2em;margin:5px 5px;}
 <span id="demo" onClick="select();"><br><br><br><br>🔮</span><span class="blink"></span></div>
 <div id="btn">
 <button onClick="random(myArray3,'🎭','😊ɸ℘ɛᴙ');">🎭</button>
-<button onClick="random(myArray2,'🎲','🤔ɸ℘ɛᴙ');">🎲</button>
+<button onClick="random(myArray2,'2','🤔ɸ℘ɛᴙ');">🎲</button>
 <button onClick="random(myArray1,'🎓','😎ᙨᖘᙓᖆ ᗣᕼᗪᙓᖘᙅᗝᕼᙓ');">🎓</button>
 <button onClick="random(myArray4,1,'👸ɸ℘ɛᴙ Ꭿϰϫɛ℘ɕσϰɛ');">🃏</button></div>
 
@@ -416,7 +416,8 @@ document.getElementById("mar2").innerHTML=armar2[day];
 var rx=Math.floor(Math.random()*x.length);
 var rand=x[rx];
 const demo=document.getElementById("demo");
-demo.innerHTML=y==1?rx%2==0?'<img class="tar" src="img/'+(rx/2|0)+'.png">':'<img class="tar up" src="img/'+(rx/2|0)+'.png">':'<br><br><br><br>'+y;
+if(y==2)demo.innerHTML='<img class="tar" src="Img1/'+rx+'.jpg">';
+else demo.innerHTML=y==1?rx%2==0?'<img class="tar" src="img/'+(rx/2|0)+'.png">':'<img class="tar up" src="img/'+(rx/2|0)+'.png">':'<br><br><br><br>'+y;
 rand=wordWrap(rand);tgl();
 function wordWrap(text) {
 const regex=/[бвгджзйклмнпрстфхцчшщ]+[аеёиоуыэюя][бвгджзйклмнпрстфхцчшщ](?=[бвгджзйклмнпрстфхцчшщьъ ])[ьъй]?|[бвгджзйклмнпрстфхцчшщ]+[аеёиоуыэюя][й]?|[аеёиоуыэюя][бвгджзйклмнпрстфхцчшщ](?=[бвгджзйклмнпрстфхцчшщьъ ])[ъь]?|[аеёиоуыэюя](?=[а-я]{2})|(?<= +)[^\s]+(?= +|$)/gmi;
@@ -425,7 +426,7 @@ let matches=text.matchAll(regex);
 for (const m of matches) {
 if(offset>9&&text[prev-1]!=' ') hyphen='|'; else hyphen='';
 out += text.substring(offset, prev)+hyphen;offset=prev;
-if (!pass)prev=m.index; pass=m[0].length < 2;}
+if(!pass)prev=m.index; pass=m[0].length < 2;}
 out += text.substring(offset);return out;};
 var le=rand.length;typeWriter();
 function typeWriter() {var ch=rand.charAt(i);
